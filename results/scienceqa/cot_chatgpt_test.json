@@ -1,0 +1,29 @@
+{
+  "acc": 78.30700306531479,
+  "correct": 3321,
+  "wrong": 920,
+  "count": 4241,
+  "args": {
+    "data_root": "../data/scienceqa",
+    "output_root": "../results",
+    "model": "cot",
+    "label": "cot_chatgpt",
+    "task_name": "scienceqa",
+    "test_split": "test",
+    "test_number": -1,
+    "seed": 0,
+    "modules": null,
+    "kr_engine": "gpt-3.5-turbo",
+    "kr_temperature": 0.0,
+    "kr_max_tokens": 512,
+    "sg_engine": "gpt-3.5-turbo",
+    "sg_temperature": 0.0,
+    "sg_max_tokens": 512,
+    "sg_patience": 5,
+    "use_caption": true,
+    "caption_file": "../data/scienceqa/captions.json",
+    "ocr_file": "../data/scienceqa/ocrs.json",
+    "object_file": "../data/scienceqa/objects.json",
+    "debug": false
+  }
+}
