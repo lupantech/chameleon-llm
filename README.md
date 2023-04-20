@@ -28,7 +28,7 @@ Code for the Paper "[Chameleon: Plug-and-Play Compositional Reasoning with Large
 
 We showcase the adaptability and effectiveness of **Chameleon** on two tasks: [ScienceQA](https://scienceqa.github.io/) and [TabMWP](https://promptpg.github.io/). Notably, **Chameleon** with GPT-4 achieves an 86.54% accuracy on ScienceQA, significantly improving upon the best published few-shot model by 11.37%; using GPT-4 as the underlying LLM, Chameleon achieves a 17.8% increase over the state-of-the-art model, leading to a 98.78% overall accuracy on TabMWP. Further studies suggest that using GPT-4 as a planner exhibits more consistent and rational tool selection and is able to infer potential constraints given the instructions, compared to other LLMs like ChatGPT.
 
-For more details, you can find our project page [here](https://chameleon-llm.github.io/) and our paper [here](assets/chameleon2023lu.pdf).
+For more details, you can find our project page [here](https://chameleon-llm.github.io/) and our paper [here](https://arxiv.org/pdf/2304.09842.pdf).
 
 
 
@@ -75,9 +75,9 @@ The Bing Search API key is **optional**. Failure to set up this key will lead to
 
 
 
-## Run on ScienceQA
+## 🤖 Run Chameleon on ScienceQA
 
-Science Question Answering ([ScienceQA](https://scienceqa.github.io/)) is a multi-modal question-answering benchmark covering a wide range of scientific topics over diverse contexts. The ScienceQA dataset is provided in [`data/ScienceQA`](https://github.com/lupantech/chameleon-llm/tree/main/data/scienceqa). For more details, you can explore the datatset and check out the [Explore](https://scienceqa.github.io/explore.html) page and [Visualize](https://scienceqa.github.io/visualize.html) page.
+Science Question Answering ([ScienceQA](https://scienceqa.github.io/)) is a multi-modal question-answering benchmark covering a wide range of scientific topics over diverse contexts. The ScienceQA dataset is provided in [`data/scienceqa`](https://github.com/lupantech/chameleon-llm/tree/main/data/scienceqa). For more details, you can explore the datatset and check out the [Explore](https://scienceqa.github.io/explore.html) page and [Visualize](https://scienceqa.github.io/visualize.html) page.
 
 For the current version, the results for the `Image Captioner` and `Text Detector` are off-the-shelf and stored in `data/scienceqa/captions.json` and `data/scienceqa/ocrs.json`, respectively. The live calling these two modules are coming soon!
 
@@ -135,7 +135,7 @@ python run.py \
 
 
 
-## Run Chameleon on TabMWP
+## 🤖 Run Chameleon on TabMWP
 
 The TabMWP dataset contains 38,431 tabular math word problems. Each question in TabMWP is aligned with a tabular context, which is presented as an image, semi-structured text, and a structured table. The TabMWP dataset is provided in [`data/tabmwp`](https://github.com/lupantech/PromptPG/blob/main/data/tabmwp). For more details, you can explore the datatset and check out the [Explore](https://promptpg.github.io/explore.html) page and [Visualize](https://promptpg.github.io/visualize.html) page.
 
@@ -165,7 +165,7 @@ It will generate the predictions and save the results at `results/tabmwp/chamele
 We can get the accuracy metrics on average and across different question classes by running:
 
 ```sh
-python evaluate_acc.py \
+python evaluate.py \
 --data_file ../data/tabmwp/problems_test.json \
 --result_root ../results/tabmwp \
 --result_files chameleon_chatgpt_test_cache.jsonl
@@ -214,7 +214,7 @@ python run.py \
 
 
 
-## More Examples
+## 😈 More Examples
 
 More examples on the ScienceQA dataset:
 
