@@ -100,27 +100,27 @@ if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument('--data_file', type=str, default="../data/tabmwp/problems_test.json")
     parser.add_argument('--result_root', type=str, default="../results/tabmwp")
-    parser.add_argument('--result_files', type=str, default="dev48_test_cache.jsonl")
+    parser.add_argument('--result_files', type=str, default="chameleon_chatgpt_test_cache.jsonl")
     args = parser.parse_args()
 
     ############################################
     # # ChatGPT CoT, 82.03%
-    # args.result_files = "dev44_test_cache.jsonl"
+    # args.result_files = "cot_chatgpt_test_cache.jsonl"
 
     # # ChatGPT PoT, 89.49%
-    # args.result_files = "dev45_test_cache.jsonl"
+    # args.result_files = "pot_chatgpt_test_cache.jsonl"
     
     # # ChatGPT chameleon (ours), 93.27%
-    # args.result_files = "dev48_test_cache.jsonl"
+    # args.result_files = "chameleon_chatgpt_test_cache.jsonl"
 
     # # GPT-4 CoT, 90.81%
-    # args.result_files = "dev51-gpt4-cot_test_cache.jsonl"
+    # args.result_files = "cot_gpt4_test_cache.jsonl"
 
     # # GPT-4 PoT, 96.93%
-    # args.result_files = "dev50-gpt4-pot_test_cache.jsonl"
+    # args.result_files = "pot_gpt4_test_cache.jsonl"
 
     # # GPT-4 chameleon (ours), 98.78%
-    # args.result_files = "dev49-gpt4-chameleon_test_cache.jsonl"
+    # args.result_files = "chameleon_gpt4_test_cache.jsonl"
     ############################################
 
     data_file = args.data_file
