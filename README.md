@@ -233,7 +233,7 @@ If you find **Chameleon** useful for your your research and applications, please
 ```latex
 @article{lu2023chameleon,
   title={Chameleon: Plug-and-Play Compositional Reasoning with Large Language Models},
-  author={Lu, Pan and Peng, Baolin and Cheng, Hao and Galley, Michel and Chang, Kai-Wei and Wu, Ying Nian and Zhu Song-Chun and Gao, Jianfeng},
+  author={Lu, Pan and Peng, Baolin and Cheng, Hao and Galley, Michel and Chang, Kai-Wei and Wu, Ying Nian and Zhu, Song-Chun and Gao, Jianfeng},
   journal={arXiv preprint arXiv:2304.09842},
   year={2023}
 }
