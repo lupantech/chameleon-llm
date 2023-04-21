@@ -15,8 +15,11 @@ Code for the Paper "[Chameleon: Plug-and-Play Compositional Reasoning with Large
 
 ## 💥 News 💥
 
-- **[2023.04.19]** Our paper is now available at https://arxiv.org/abs/2304.09842.
-- **[2023.04.19]** Our project is now available at https://chameleon-llm.github.io/.
+- **[2023.04.19]** Our paper is now accessible at https://arxiv.org/abs/2304.09842.
+- **[2023.04.19]** Visit our project's homepage at [Chameleon-LLM](https://chameleon-llm.github.io/).
+- **[2023.04.19]** Special thanks to [@_akhaliq](https://twitter.com/_akhaliq/status/1648851856930533378) for promptly sharing our work on [Twitter](https://twitter.com/_akhaliq/status/1648851856930533378)!
+- **[2023.04.19]** We appreciate [Aran Komatsuzaki](https://twitter.com/arankomatsuzaki/status/1648848332977221632) for featuring our work on [Twitter](https://twitter.com/arankomatsuzaki/status/1648848332977221632) in a timely manner!
+- **[2023.04.19]** Our research is now listed on [Papers with Code](https://paperswithcode.com/paper/chameleon-plug-and-play-compositional).
 
 
 
@@ -26,7 +29,7 @@ Code for the Paper "[Chameleon: Plug-and-Play Compositional Reasoning with Large
 
 ![showcase_scienceqa](assets/showcase_scienceqa.png)
 
-We showcase the adaptability and effectiveness of **Chameleon** on two tasks: [ScienceQA](https://scienceqa.github.io/) and [TabMWP](https://promptpg.github.io/). Notably, **Chameleon** with GPT-4 achieves an 86.54% accuracy on ScienceQA, significantly improving upon the best published few-shot model by 11.37%; using GPT-4 as the underlying LLM, Chameleon achieves a 17.8% increase over the state-of-the-art model, leading to a 98.78% overall accuracy on TabMWP. Further studies suggest that using GPT-4 as a planner exhibits more consistent and rational tool selection and is able to infer potential constraints given the instructions, compared to other LLMs like ChatGPT.
+We showcase the adaptability and effectiveness of **Chameleon** on two tasks: [ScienceQA](https://scienceqa.github.io/) and [TabMWP](https://promptpg.github.io/). Notably, **Chameleon** with GPT-4 achieves an 86.54% accuracy on ScienceQA, significantly improving upon the best published few-shot model by 11.37%; using GPT-4 as the underlying LLM, **Chameleon** achieves a 17.8% increase over the state-of-the-art model, leading to a 98.78% overall accuracy on TabMWP. Further studies suggest that using GPT-4 as a planner exhibits more consistent and rational tool selection and is able to infer potential constraints given the instructions, compared to other LLMs like ChatGPT.
 
 For more details, you can find our project page [here](https://chameleon-llm.github.io/) and our paper [here](https://arxiv.org/pdf/2304.09842.pdf).
 
@@ -72,6 +75,22 @@ You can set up paid account at https://platform.openai.com/account/billing/overv
 Obtain your Bing Search API key from: https://www.microsoft.com/en-us/bing/apis/bing-web-search-api.
 
 The Bing Search API key is **optional**. Failure to set up this key will lead to a slight performance drop on the ScienceQA task.
+
+
+
+## Module Inventory
+
+### Different Tools in Chameleon
+
+ Different types of tools in our module inventory:
+
+![tools](assets/tools.png)
+
+### Tool Subset
+
+Tools used on ScienceQA and TabMWP, respectively. The reusable tools in two tasks are highlighted in green:
+
+![tools_task](assets/tools_task.png)
 
 
 
@@ -122,12 +141,25 @@ python run.py \
 --test_number -1
 ```
 
-To run CoT GPT-4:
+Our **Chameleon** is a generalized form of the [CoT (chain-of-thought)](https://arxiv.org/abs/2201.11903) method, where the generated program is a sequence of `Solution Generator` and `Answer Generator`. By passing `--model` as `cot`,  `modules` is set as `["solution_generator", "answer_generator"]`.
+
+To run CoT (chain-of-thought prompted) GPT-4:
 
 ```sh
 python run.py \
 --model cot \
 --label cot_gpt4 \
+--sg_engine gpt-4 \
+--test_split test \
+--test_number -1
+```
+
+To run CoT (chain-of-thought prompted) ChatGPT:
+
+```sh
+python run.py \
+--model cot \
+--label cot_chatgpt \
 --sg_engine gpt-4 \
 --test_split test \
 --test_number -1
@@ -190,7 +222,7 @@ python run.py \
 --cl_cell_threshold 18
 ```
 
-To run CoT GPT-4:
+To run CoT (chain-of-thought prompted) GPT-4:
 
 ```sh
 python run.py \
@@ -201,7 +233,20 @@ python run.py \
 --test_number -1
 ```
 
-To run PoT GPT-4:
+To run CoT (chain-of-thought prompted) ChatGPT:
+
+```sh
+python run.py \
+--model cot \
+--label cot_chatgpt \
+--test_split test \
+--sg_engine gpt-3.5-turbo \
+--test_number -1
+```
+
+Our **Chameleon** is a generalized form of the [PoT (program-of-thought)](https://arxiv.org/abs/2211.12588) method, where the generated program is a sequence of `Solution Generator` and `Answer Generator`. By passing `--model` as `cot`,  `modules` is set as `["solution_generator", "answer_generator"]`.
+
+To run PoT (program-of-thought prompted) GPT-4:
 
 ```sh
 python run.py \
@@ -212,17 +257,87 @@ python run.py \
 --test_number -1
 ```
 
+To run PoT (program-of-thought prompted) ChatGPT:
 
+```sh
+python run.py \
+--model pot \
+--label pot_chatgpt \
+--test_split test \
+--pg_engine gpt-3.5-turbo \
+--test_number -1
+```
 
 ## 😈 More Examples
 
-More examples on the ScienceQA dataset:
+### More examples on ScienceQA dataset
 
 ![showcase_scienceqa_more](assets/showcase_scienceqa_more.png)
 
-More examples on the TabMWP dataset:
+**Chameleon** (GPT-4) is able to adapt to different input queries by generating programs that compose various tools and executing them sequentially to obtain the correct answers. 
+
+For instance, the query above asks, “Which animal’s skin is adapted for survival in cold places?”, which involves scientific terminology related to animal survival. Consequently, the planner decides to rely on the *Bing search* engine for domain-specific knowledge, benefiting from the numerous online resources available.
+
+### More examples on TabMWP
 
 ![showcase_tabmwp_long](assets/showcase_tabmwp_long.png)
+
+The adaptability and versatility of our **Chameleon** for various queries are also observed on TabMWP, as illustrated in the examples in the figure above. 
+
+The first example involves mathematical reasoning on a tax form. **Chameleon** (1) calls the knowledge retrieval model to recall basic knowledge that assists in understanding such domain-specific tables, (2) describes the table in a more readable natural language format, and (3) finally relies on program-aided tools to perform precise computations. 
+
+In the second example, the system generates Python code that closely aligns with the background knowledge provided by the knowledge retrieval model. 
+
+The third example requires the system to locate the cell in a large tabular context given the input query. **Chameleon** calls the row lookup model to help accurately locate the relevant rows and generate the language solution via an LLM model, instead of relying on program-based tools.
+
+
+
+## :chart_with_upwards_trend: How Good is Chameleon?
+
+Significant improvements are observed for **Chameleon** over both fine-tuned models and few-shot prompted GPT-4/ChatGPT:
+
+![results](assets/results.png)
+
+
+
+## :slot_machine: What Plans Are Chameleon Learned?
+
+### Tool Use
+
+Tools called in the generated programs from **Chameleon** (ChatGPT) and **Chameleon** (GPT-4) on ScienceQA:
+
+![tool_call_scienceqa](assets/tool_call_scienceqa.png)
+
+Tools called in the generated programs from Chameleon (ChatGPT) and Chameleon (GPT-4) on TabMWP:
+
+![tool_call_tabmwp](assets/tool_call_tabmwp.png)
+
+### Transition Graph
+
+Transitions between modules in programs generated by **Chameleon** (GPT-4) on ScienceQA. START is the start symbol, END is a terminal symbol and the others are non-terminal symbols.
+
+<img src="assets/transition_scienceqa_gpt4.png" width=50% height=50%>
+
+Transitions between modules in programs generated by **Chameleon** (GPT-4) on TabMWPQA. START is the start symbol, END is a terminal symbol and the others are non-terminal symbols.
+
+
+
+<img src="assets/transition_tabmwp_gpt4.png" width=50% height=50%>
+
+
+
+## :smile_cat: Want to Develop A New Task?
+
+- **Construct the module inventory**: Create prompts for LLM-based models within the `demos` directory. Define the input, execution, and output for each module in `model.py`.
+- **Develop the LLM planner**: Provide a comprehensive description of the module inventory and include a few examples that demonstrate how to map queries to the target program.
+- **Implement the data loader and evaluation method**: Define the data loader within `model.py`. To modify the evaluation method, update the corresponding section in `main.py`.
+- **Enjoy the process**: With the groundwork in place, it's time to have fun and dive into the task at hand!
+
+
+
+## :coffee: Stay Connected!
+
+Fantastic! I'm always open to engaging discussions, collaborations, or even just sharing a virtual coffee. To get in touch, visit Pan Lu' [homepage](https://lupantech.github.io/) for contact information.
 
 
 
