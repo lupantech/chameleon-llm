@@ -148,7 +148,7 @@ python run.py \
 --model chameleon \
 --label chameleon_gpt4 \
 --test_split test \
---tl_engine gpt-4 \
+--policy_engine gpt-4 \
 --rl_engine gpt-4 \
 --cl_engine gpt-4 \
 --tv_engine gpt-4 \
@@ -178,7 +178,7 @@ python run.py \
 --model chameleon \
 --label chameleon_chatgpt \
 --test_split test \
---tl_engine gpt-3.5-turbo \
+--policy_engine gpt-3.5-turbo \
 --rl_engine gpt-3.5-turbo \
 --cl_engine gpt-3.5-turbo \
 --tv_engine gpt-3.5-turbo \

@@ -28,10 +28,6 @@ def parse_args():
     parser.add_argument('--policy_engine', type=str, default="gpt-3.5-turbo", help='engine for module prediction')
     parser.add_argument('--policy_temperature', type=float, default=0., help='temperature for module prediction')
     parser.add_argument('--policy_max_tokens', type=int, default=128, help='max tokens for module prediction')
-    # table lookup
-    parser.add_argument('--tl_engine', type=str, default="gpt-3.5-turbo", help='engine for table lookup')
-    parser.add_argument('--tl_temperature', type=float, default=0., help='temperature for table lookup')
-    parser.add_argument('--tl_max_tokens', type=int, default=256, help='max tokens for table lookup')
     # row lookup
     parser.add_argument('--rl_engine', type=str, default="gpt-3.5-turbo", help='engine for row lookup')
     parser.add_argument('--rl_temperature', type=float, default=0., help='temperature for row lookup')

@@ -8,7 +8,7 @@ import openai
 sys.path.append(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from utilities import *
-from demos import prompt_policy, prompt_cl, prompt_kr, prompt_pg, prompt_rl, prompt_sg, prompt_tl, prompt_tv, prompt_eg
+from demos import prompt_policy, prompt_rl, prompt_cl, prompt_tv, prompt_kr, prompt_pg, prompt_sg
 
 openai.api_key = os.getenv("OPENAI_API_KEY")
 print(openai.api_key)
@@ -247,15 +247,6 @@ class solver:
             solution = "# Python Code, return 'ans'. Make sure that 'ans' is a string selected from the options in the question"
         else:
             solution = "# Python Code, return 'ans'. Make sure that 'ans' is a number"
-
-        # # external information
-        # if "table_verbalizer:output" in self.cache:
-        #     verbalization = self.cache["table_verbalizer:output"]
-        #     table = f"{table}\n\nTable description: {verbalization}"
-
-        # if "knowledge_retrieval:output" in self.cache:
-        #     knowledge = self.cache["knowledge_retrieval:output"]
-        #     question = f"Knowledge: {knowledge}\n\n{question}"
         
         if context != "":
             test_prompt = f"{instruction}\n\n{table}\n\n{context}\n\n{question}\n\n{solution}"
@@ -294,13 +285,6 @@ class solver:
         return True
 
     def program_verifier(self):
-        # get the module input
-        # if "program_generator_and_verifier:output" in self.cache:
-        #     program = self.cache["program_generator_and_verifier:output"]
-        # elif "program_generator:output" in self.cache:
-        #     program = self.cache["program_generator:output"]
-        # else:
-        #     return None, False
         if "program" in self.cache:
             program = self.cache["program"]
         else:
@@ -343,11 +327,6 @@ class solver:
         return test_prompt, program
 
     def program_executor(self):
-        # get the module input
-        # if "program_generator_and_verifier:output" in self.cache:
-        #     program = self.cache["program_generator_and_verifier:output"]
-        # elif "program_generator:output" in self.cache:
-        #     program = self.cache["program_generator:output"]
         if "program" in self.cache:
             program = self.cache["program"]
         else:
@@ -382,17 +361,6 @@ class solver:
             question += f" (Unit: {unit})"
         if choices:
             question += f" Please select from the following options: {choices}."
-
-        # # external information
-        # if "table_verbalizer:output" in self.cache:
-        #     verbalization = self.cache["table_verbalizer:output"]
-        #     table = f"{table}\n\nTable description: {verbalization}"
-
-        # if "knowledge_retrieval:output" in self.cache:
-        #     knowledge = self.cache["knowledge_retrieval:output"]
-        #     question = f"Knowledge: {knowledge}\n\n{question}"
-
-        # test_prompt = f"{instruction}\n\n{table}\n\n{question}\n\nSolution: "
 
         if context != "":
             test_prompt = f"{instruction}\n\n{table}\n\n{context}\n\n{question}\n\nSolution: "
