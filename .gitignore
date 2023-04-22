@@ -1,6 +1,5 @@
-saved_models/
-venv/
-data/scienceqa/images/
+env/
+# data/scienceqa/images/
 
 checkpoints/*.pt
 
