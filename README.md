@@ -255,7 +255,7 @@ python run.py \
 --test_number -1
 ```
 
-Our **Chameleon** is a generalized form of the [PoT (program-of-thought)](https://arxiv.org/abs/2211.12588) method, where the generated program is a sequence of `Solution Generator` and `Answer Generator`. By passing `--model` as `cot`,  `modules` is set as `["solution_generator", "answer_generator"]`.
+Our **Chameleon** is a generalized form of the [PoT (program-of-thought)](https://arxiv.org/abs/2211.12588) method, where the generated program is a sequence of `Program Generator`,  `Program Executor`, and `Answer Generator`. By passing `--model` as `pot`,  `modules` is set as `["program_generator", "program_executor", "answer_generator"]`.
 
 To run PoT (program-of-thought prompted) GPT-4:
 
@@ -313,7 +313,7 @@ To visualize the predictions made by **Chameleon**, simply execute the Jupyter N
 
 
 
-## :slot_machine: What Plans Are Chameleon Learned?
+## :slot_machine: What Plans Are Chameleon Learning?
 
 ### Tool Use
 
