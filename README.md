@@ -20,6 +20,7 @@ Code for the Paper "[Chameleon: Plug-and-Play Compositional Reasoning with Large
 
 ## 💥 News 💥
 
+- **[2023.04.22]** Thrilled to announce that our work has been featured on [WorldofAI](https://www.youtube.com/watch?v=EWFixIk4vjs&ab_channel=WorldofAI)'s [YouTube channel](https://www.youtube.com/watch?v=EWFixIk4vjs&ab_channel=WorldofAI)!
 - **[2023.04.21]** Our work is the trending project on https://trends.vercel.app. [[Link](https://raw.githubusercontent.com/lupantech/chameleon-llm/main/assets/trend.png)]
 - **[2023.04.20]** Huge thanks to [John Nay](https://twitter.com/johnjnay/status/1649036276627132418) for sharing our work on [Twitter](https://twitter.com/johnjnay/status/1649036276627132418)!
 - **[2023.04.19]** Our research is now listed on [Papers with Code](https://paperswithcode.com/paper/chameleon-plug-and-play-compositional).
