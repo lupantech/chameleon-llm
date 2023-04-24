@@ -1,4 +1,4 @@
-# :lizard: Chameleon: Plug-and-Play Compositional Reasoning with GPT-4
+# ÷:lizard: Chameleon: Plug-and-Play Compositional Reasoning with GPT-4
 
 ![Science Problems](https://img.shields.io/badge/Task-Science_Problems-blue) 
 ![Science Problems](https://img.shields.io/badge/Task-MathQA-blue) 
@@ -11,7 +11,7 @@ Code for the Paper "[Chameleon: Plug-and-Play Compositional Reasoning with Large
 
 :bell: If you have any questions or suggestions, please don't hesitate to let us know. You can directly email [Pan Lu](https://lupantech.github.io/) using the email address lupantech@gmail.com, comment on the [Twitter](https://twitter.com/lupantech/status/1648879085115052033), or post an issue on this repository.
 
-[[Project Page](https://chameleon-llm.github.io/)] [[Paper](https://arxiv.org/abs/2304.09842)] [[Twitter](https://twitter.com/lupantech/status/1648879085115052033)] [[Linkedin](https://chameleon-llm.github.io/)] 
+[[Project Page](https://chameleon-llm.github.io/)] [[Paper](https://arxiv.org/abs/2304.09842)] [[Twitter](https://twitter.com/lupantech/status/1648879085115052033)] [[Linkedin](https://chameleon-llm.github.io/)] [[YouTube Video](https://www.youtube.com/watch?v=EWFixIk4vjs&ab_channel=WorldofAI)] 
 
 <p align="center">
     <img src="https://raw.githubusercontent.com/chameleon-llm/chameleon-llm.github.io/main/images/logo.png" width="10%"> <br>
