@@ -1,6 +1,8 @@
 huggingface-hub
+easyocr==1.6.2
+func_timeout==4.3.5
 numpy==1.23.2
-openai==0.23.0
+openai==0.27.0
 pandas==1.4.3
-transformers==4.21.1
-requests==2.28.1
+Requests==2.28.2
+tqdm==4.62.3
