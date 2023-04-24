@@ -41,17 +41,17 @@ We showcase the adaptability and effectiveness of **Chameleon** on two tasks: [S
 
 For more details, you can find our project page [here](https://chameleon-llm.github.io/) and our paper [here](https://arxiv.org/pdf/2304.09842.pdf).
 
+
+## :star: Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=lupantech/chameleon-llm&type=Date)](https://star-history.com/#lupantech/chameleon-llm&Date)
+
+
 ## :tv: YouTube Video
 
 We would like to express our immense gratitude to [WorldofAI](https://www.youtube.com/@intheworldofai) for featuring and introducing our work on [YouTube](https://www.youtube.com/watch?v=EWFixIk4vjs&ab_channel=WorldofAI)!
 
 [![YouTube Video](https://img.youtube.com/vi/EWFixIk4vjs/0.jpg)](https://www.youtube.com/watch?v=EWFixIk4vjs)
-
-
-
-## :star: Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=lupantech/chameleon-llm&type=Date)](https://star-history.com/#lupantech/chameleon-llm&Date)
 
 
 ## 🐙 Requirements
