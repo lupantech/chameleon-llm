@@ -45,9 +45,8 @@ For more details, you can find our project page [here](https://chameleon-llm.git
 
 We would like to express our immense gratitude to [WorldofAI](https://www.youtube.com/@intheworldofai) for featuring and introducing our work on [YouTube](https://www.youtube.com/watch?v=EWFixIk4vjs&ab_channel=WorldofAI)!
 
-<p align="center">
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/EWFixIk4vjs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-</p>
+[![YouTube Video](https://img.youtube.com/vi/EWFixIk4vjs/0.jpg)](https://www.youtube.com/watch?v=EWFixIk4vjs)
+
 
 
 ## :star: Star History
