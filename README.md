@@ -20,6 +20,8 @@ Code for the Paper "[Chameleon: Plug-and-Play Compositional Reasoning with Large
 
 ## 💥 News 💥
 
+- **[2023.04.24]** Our work has been featured in a [MarkTechPost](https://www.marktechpost.com/2023/04/24/meet-chameleon-a-plug-and-play-compositional-reasoning-framework-that-harnesses-the-capabilities-of-large-language-models/) article.
+- **[2023.04.23]** Our research has been recognized as one of the "Top ML Papers of the Week" by [DAIR.AI](https://www.linkedin.com/pulse/top-ml-papers-week-dair-ai-8e/?trackingId=w6D1Ow8FxKSTjgdFuwgYnQ%3D%3D).
 - **[2023.04.22]** Thrilled to announce that our work has been featured on [WorldofAI](https://www.youtube.com/watch?v=EWFixIk4vjs&ab_channel=WorldofAI)'s [YouTube channel](https://www.youtube.com/watch?v=EWFixIk4vjs&ab_channel=WorldofAI)!
 - **[2023.04.21]** Our work is the trending project on https://trends.vercel.app. [[Link](https://raw.githubusercontent.com/lupantech/chameleon-llm/main/assets/trend.png)]
 - **[2023.04.20]** Huge thanks to [John Nay](https://twitter.com/johnjnay/status/1649036276627132418) for sharing our work on [Twitter](https://twitter.com/johnjnay/status/1649036276627132418)!
@@ -41,17 +43,17 @@ We showcase the adaptability and effectiveness of **Chameleon** on two tasks: [S
 
 For more details, you can find our project page [here](https://chameleon-llm.github.io/) and our paper [here](https://arxiv.org/pdf/2304.09842.pdf).
 
-
-## :star: Star History
-
-[![Star History Chart](https://api.star-history.com/svg?repos=lupantech/chameleon-llm&type=Date)](https://star-history.com/#lupantech/chameleon-llm&Date)
-
-
 ## :tv: YouTube Video
 
 We would like to express our immense gratitude to [WorldofAI](https://www.youtube.com/@intheworldofai) for featuring and introducing our work on [YouTube](https://www.youtube.com/watch?v=EWFixIk4vjs&ab_channel=WorldofAI)!
 
 [![YouTube Video](https://img.youtube.com/vi/EWFixIk4vjs/0.jpg)](https://www.youtube.com/watch?v=EWFixIk4vjs)
+
+
+
+## :star: Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=lupantech/chameleon-llm&type=Date)](https://star-history.com/#lupantech/chameleon-llm&Date)
 
 
 ## 🐙 Requirements
