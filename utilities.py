@@ -126,16 +126,13 @@ def floatify_ans(ans):
 def score_string_similarity(str1, str2):
     if str1 == str2:
         return 2.0
-    if " " in str1 or " " in str2:
+    elif " " in str1 or " " in str2:
         str1_split = str1.split(" ")
         str2_split = str2.split(" ")
         overlap = list(set(str1_split) & set(str2_split))
         return len(overlap) / max(len(str1_split), len(str2_split))
     else:
-        if str1 == str2:
-            return 1.0
-        else:
-            return 0.0
+        return 0.0
         
 def normalize_prediction_tabmwp(prediction, options=None, unit=None):
     # the numerical answer
