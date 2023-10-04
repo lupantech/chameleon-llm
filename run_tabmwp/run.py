@@ -32,14 +32,14 @@ def parse_args():
     parser.add_argument('--rl_engine', type=str, default="gpt-3.5-turbo", help='engine for row lookup')
     parser.add_argument('--rl_temperature', type=float, default=0., help='temperature for row lookup')
     parser.add_argument('--rl_max_tokens', type=int, default=256, help='max tokens for row lookup')
-    parser.add_argument('--rl_cand', type=int, default=1, help='candiates for row lookup')
+    parser.add_argument('--rl_cand', type=int, default=1, help='candidates for row lookup')
     parser.add_argument('--rl_row_threshold', type=int, default=3, help='row number threshold for row lookup')
     parser.add_argument('--rl_cell_threshold', type=int, default=12, help='cell number threshold for row lookup')
     # column lookup
     parser.add_argument('--cl_engine', type=str, default="gpt-3.5-turbo", help='engine for column lookup')
     parser.add_argument('--cl_temperature', type=float, default=0., help='temperature for column lookup')
     parser.add_argument('--cl_max_tokens', type=int, default=256, help='max tokens for column lookup')
-    parser.add_argument('--cl_cand', type=int, default=1, help='candiates for column lookup')
+    parser.add_argument('--cl_cand', type=int, default=1, help='candidates for column lookup')
     parser.add_argument('--cl_col_threshold', type=int, default=2, help='column number threshold for column lookup')
     parser.add_argument('--cl_cell_threshold', type=int, default=12, help='cell number threshold for column lookup')
     # table verbalizer
