@@ -75,7 +75,7 @@ transformers==4.21.1
 requests==2.28.1
 ```
 
-Install all required python dependencies (you can skip this step if you have set up the dependencies before and the verisons are not strictly required):
+Install all required python dependencies (you can skip this step if you have set up the dependencies before and the versions are not strictly required):
 
 ```
 pip install -r requirements.txt
@@ -119,7 +119,7 @@ Tools used on ScienceQA and TabMWP, respectively. The reusable tools in two task
 
 ## 🤖 Run Chameleon on ScienceQA
 
-Science Question Answering ([ScienceQA](https://scienceqa.github.io/)) is a multi-modal question-answering benchmark covering a wide range of scientific topics over diverse contexts. The ScienceQA dataset is provided in [`data/scienceqa`](https://github.com/lupantech/chameleon-llm/tree/main/data/scienceqa). For more details, you can explore the datatset and check out the [Explore](https://scienceqa.github.io/explore.html) page and [Visualize](https://scienceqa.github.io/visualize.html) page.
+Science Question Answering ([ScienceQA](https://scienceqa.github.io/)) is a multi-modal question-answering benchmark covering a wide range of scientific topics over diverse contexts. The ScienceQA dataset is provided in [`data/scienceqa`](https://github.com/lupantech/chameleon-llm/tree/main/data/scienceqa). For more details, you can explore the dataset and check out the [Explore](https://scienceqa.github.io/explore.html) page and [Visualize](https://scienceqa.github.io/visualize.html) page.
 
 For the current version, the results for the `Image Captioner` and `Text Detector` are off-the-shelf and stored in `data/scienceqa/captions.json` and `data/scienceqa/ocrs.json`, respectively. The live calling these two modules are coming soon!
 
@@ -371,7 +371,7 @@ Fantastic! I'm always open to engaging discussions, collaborations, or even just
 
 ## :white_check_mark: Cite
 
-If you find **Chameleon** useful for your your research and applications, please kindly cite using this BibTeX:
+If you find **Chameleon** useful for your research and applications, please kindly cite using this BibTeX:
 
 ```latex
 @article{lu2023chameleon,

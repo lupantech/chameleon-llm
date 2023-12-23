@@ -168,7 +168,7 @@ class solver:
                 # TODO: run the image captioner model on the fly
                 caption = "" 
 
-        # uodate the response cache
+        # update the response cache
         if caption != "":
             response += f"\n\nImage caption: {caption}"
             response = response.strip()
@@ -190,7 +190,7 @@ class solver:
             try:
                 ocr = eval(self.cache["example"]["ocr"])
                 if len(ocr) > 0:
-                    texts = [(t[0], t[1]) for t in ocr] # (coordiantes, text)
+                    texts = [(t[0], t[1]) for t in ocr] # (coordinates, text)
             except:
                 pass
         else:
@@ -200,7 +200,7 @@ class solver:
                 # TODO: run the image captioner model on the fly
                 texts = []
 
-        # uodate the response cache
+        # update the response cache
         if len(texts) > 0:
             response += f"\n\nDetected text in the image: {texts}"
             response = response.strip()
